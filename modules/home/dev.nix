@@ -31,12 +31,12 @@
   #};
 
   # Editor
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode;
-    profiles.default.extensions = with pkgs.vscode-extensions; [
-      esbenp.prettier-vscode
-      pkief.material-icon-theme
-    ];
-  };
+  #programs.vscode = {
+  # enable = true;
+  # package = pkgs.vscode;
+  # profiles.default.extensions = with pkgs.vscode-extensions; [
+  #   esbenp.prettier-vscode
+  #   pkief.material-icon-theme
+  # ];
+  #};
 }

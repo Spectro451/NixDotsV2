@@ -7,10 +7,8 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-
       #Monitor
       monitor = [ ",preferred,auto,1" ];
-
       #Start
       exec-once = [
         "noctalia-shell"
@@ -18,63 +16,46 @@ in
         "obsidian"
         "spotify"
       ];
-
-      #Window Rules
-      windowrulev2 = [
-        "workspace 1 silent, class:^(firefox)$"
-        "workspace 2 silent, class:^(obsidian)$"
-        "workspace 3 silent, class:^(spotify)$"
-      ];
-
+      windowrule = [
+        "workspace 1 silent, match:class ^(firefox)$"
+        "workspace 2 silent, match:class ^(obsidian)$"
+        "workspace 3 silent, match:class ^(spotify)$"
+        "opacity 1.0 override 0.85 override 1 override, match:title .*YouTube.*"
+        "opacity 1.0 override 0.85 override 1 override, match:title .*Crunchyroll.*"
+        "opacity 1.0 override 0.85 override 1 override, match:title .*Netflix.*"
+        "opacity 1.0 override 0.85 override 1 override, match:title .*Max.*"
+        "suppress_event maximize, match:class .*"
+        "no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0"
+      ]; 
       #Env
       env = [
         "XCURSOR_SIZE,10"
         "HYPRCURSOR_SIZE,10"
       ];
-
       #Look and Feel
       general = {
         gaps_in = 2;
         gaps_out = 6;
         border_size = 2;
-
         #Bordes Eva-01 style
         "col.active_border" = "rgba(965fd4ff) rgba(8bd450ff) 45deg";
         "col.inactive_border" = "rgba(3f6d4eee)";
-
         resize_on_border = true;
-
         allow_tearing = true;
         layout = "dwindle";
       };
-
       #decoration
       decoration = {
         rounding = 7;
         rounding_power = 2;
-
-        windowrule = [
-          "opacity 1.0 override 0.85 override 1 override, title:.*YouTube.*"
-          "opacity 1.0 override 0.85 override 1 override, title:.*Crunchyroll.*"
-          "opacity 1.0 override 0.85 override 1 override, title:.*Netflix.*"
-          "opacity 1.0 override 0.85 override 1 override, title:.*Max.*"
-          "suppressevent maximize, class:.*"
-          "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        ];
-        windowrulev2 = [
-          "idleinhibit fullscreen, class:.*"
-        ];
-
         active_opacity = 0.90;
         inactive_opacity = 0.85;
-
         shadow = {
           enabled = true;
           range = 9;
           render_power = 4;
           color = "rgba(734f9aff)";
         };
-
         blur = {
           enabled = true;
           size = 4;
@@ -82,11 +63,9 @@ in
           vibrancy = 0.6;
         };
       };
-
       #animations
       animations = {
         enabled = true;
-
         bezier = [
           "easeOutQuint,0.23,1,0.32,1"
           "easeinoutcubic,0.65,0.05,0.36,1"
@@ -94,7 +73,6 @@ in
           "almostLinear,0.5,0.5,0.75,1.0"
           "quick,0.15,0,0.1,1"
         ];
-
         animation = [
           "global, 1, 10, default"
           "border, 1, 5.39, easeOutQuint"
@@ -114,38 +92,32 @@ in
           "workspacesOut, 1, 8, easeOutQuint, slide"
         ];
       };
-
       #Layout
-        dwindle = {
-            pseudotile = true;
-            preserve_split = true;
-        };
-        master = {
-            new_status = "master";
-        };
-        misc = {
-            force_default_wallpaper = 0;
-            disable_hyprland_logo = true;
-        };
-      #Input
-        input = {
-            #Keyboard
-            kb_layout = "latam";
-            #Numlock
-            numlock_by_default = true;
-            #Mouse
-            follow_mouse = 1;
-            sensitivity = 0;
-            #Touchpad
-            touchpad = {
-            natural_scroll = false;
-            };
-        };
-      #Gestos
-      gestures = {
-        workspace_swipe = false;
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
       };
-
+      master = {
+        new_status = "master";
+      };
+      misc = {
+        force_default_wallpaper = 0;
+        disable_hyprland_logo = true;
+      };
+      #Input
+      input = {
+        #Keyboard
+        kb_layout = "latam";
+        #Numlock
+        numlock_by_default = true;
+        #Mouse
+        follow_mouse = 1;
+        sensitivity = 0;
+        #Touchpad
+        touchpad = {
+          natural_scroll = false;
+        };
+      };
       #Binds
       bind = [
         #Comunes
@@ -158,13 +130,11 @@ in
         "SUPER, P, pseudo"
         "SUPER, J, togglesplit"
         "SUPER, F, fullscreen"
-
         #Focus
         "SUPER, left, movefocus, l"
         "SUPER, right, movefocus, r"
         "SUPER, up, movefocus, u"
         "SUPER, down, movefocus, d"
-
         #workspaces
         "SUPER, 1, workspace, 1"
         "SUPER, 2, workspace, 2"
@@ -176,7 +146,6 @@ in
         "SUPER, 8, workspace, 8"
         "SUPER, 9, workspace, 9"
         "SUPER, 0, workspace, 10"
-
         #MoveWindows
         "SUPER SHIFT, 1, movetoworkspace, 1"
         "SUPER SHIFT, 2, movetoworkspace, 2"
@@ -188,23 +157,19 @@ in
         "SUPER SHIFT, 8, movetoworkspace, 8"
         "SUPER SHIFT, 9, movetoworkspace, 9"
         "SUPER SHIFT, 0, movetoworkspace, 10"
-
         #ScreenShot
         "SUPER, S, exec, hyprshot -m region"
         "SUPER SHIFT, S, exec, hyprshot -m region"
-
         #Scroll workspaces
         "SUPER, mouse_down, workspace, e+1"
         "SUPER, mouse_up, workspace, e-1"
       ];
-
       #MouseBind
       bindm = [
         #Rezise
         "SUPER, mouse:272, movewindow"
         "SUPER, mouse:273, resizewindow"
       ];
-
       #EspecialKey
       bindel = [
         ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
@@ -214,7 +179,6 @@ in
         ",XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+"
         ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
       ];
-
       #Multimedia
       bindl = [
         ", XF86AudioNext, exec, playerctl next"

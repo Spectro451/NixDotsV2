@@ -8,7 +8,7 @@ in
     enable = true;
     settings = {
       #Monitor
-      monitor = [ ",preferred,auto,1" ];
+      monitor = [ ",1920x1080@165,auto,1" ];
       #Start
       exec-once = [
         "noctalia-shell"

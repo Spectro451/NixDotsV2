@@ -5,7 +5,7 @@
   home.stateVersion = "25.05";
 
   imports = [
-    noctalia.homeModules.default
+    ./modules/home/noctalia.nix
     ./modules/home/zsh.nix
     ./modules/home/hyprland
     ./modules/home/fastfetch
@@ -36,6 +36,7 @@
     protonup-qt
     syncthing
     obsidian
+    thunar
   ];
 
   home.file = {

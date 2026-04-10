@@ -152,7 +152,7 @@
         screenOverrides = [];
       };
       general = {
-        avatarImage = "";
+        avatarImage = "/home/kiwi/NixDotsV2/assets/tetoMaid.jpg";
         dimmerOpacity = 0.1;
         showScreenCorners = false;
         forceBlackScreenCorners = false;
@@ -240,22 +240,22 @@
       wallpaper = {
         enabled = true;
         overviewEnabled = false;
-        directory = "";
+        directory = "/home/kiwi/NixDotsV2/assets/Wallpapers";
         monitorDirectories = [];
         enableMultiMonitorDirectories = false;
         showHiddenFiles = false;
         viewMode = "recursive";
         setWallpaperOnAllMonitors = true;
         linkLightAndDarkWallpapers = true;
-        fillMode = "fit";
+        fillMode = "stretch";
         fillColor = "#000000";
         useSolidColor = false;
         solidColor = "#1a1a2e";
         automationEnabled = true;
         wallpaperChangeMode = "random";
         randomIntervalSec = 1200;
-        transitionDuration = 1200;
-        transitionType = [ "disc" "stripes" "wipe" "pixelate" "honeycomb" "fade" ];
+        transitionDuration = 800;
+        transitionType = [ "stripes"];
         skipStartupTransition = true;
         transitionEdgeSmoothness = 0.05;
         panelPosition = "follow_bar";

@@ -10,10 +10,12 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
-  outputs = { self, nixpkgs, home-manager, noctalia, ... }:
+  outputs = { self, nixpkgs, home-manager, noctalia, nix-vscode-extensions, ... }:
   let
     system = "x86_64-linux";
+    vsExtensions = nix-vscode-extensions.extensions.${system};
     kasaneCursorOverlay = final: prev: {
       kasane-teto-cursors = prev.runCommand "kasane-teto-cursor" {} ''
         mkdir -p $out/share/icons
@@ -34,7 +36,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.kiwi = import ./home.nix;
-            home-manager.extraSpecialArgs = { inherit noctalia; };
+            home-manager.extraSpecialArgs = { inherit noctalia vsExtensions; };
             home-manager.backupFileExtension = "backup";
             home-manager.overwriteBackup = true;
           }
@@ -52,7 +54,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.kiwi = import ./home.nix;
-            home-manager.extraSpecialArgs = { inherit noctalia; };
+            home-manager.extraSpecialArgs = { inherit noctalia vsExtensions; };
             home-manager.backupFileExtension = "backup";
             home-manager.overwriteBackup = true;
           }

@@ -12,7 +12,7 @@
     autoNumlock = true;
     settings.Theme = {
       CursorTheme = "kasane-teto-cursors";
-      CursorSize = 24;
+      CursorSize = 30;
     };
   };
 }

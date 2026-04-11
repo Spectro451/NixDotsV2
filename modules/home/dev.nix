@@ -1,4 +1,3 @@
-# modules/home/dev.nix
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
@@ -20,7 +19,7 @@
     #android-studio
     #libglvnd
 
-    # API Testing
+    # API
     #postman
   ];
 
@@ -28,15 +27,5 @@
   #programs.java = {
   #  enable = true;
   #  package = pkgs.openjdk21;
-  #};
-
-  # Editor
-  #programs.vscode = {
-  # enable = true;
-  # package = pkgs.vscode;
-  # profiles.default.extensions = with pkgs.vscode-extensions; [
-  #   esbenp.prettier-vscode
-  #   pkief.material-icon-theme
-  # ];
   #};
 }

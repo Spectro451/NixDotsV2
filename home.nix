@@ -13,6 +13,7 @@
     ./modules/home/ranger
     ./modules/home/dev.nix
     ./modules/home/cursor.nix
+    ./modules/home/vscode.nix
   ];
 
   programs.noctalia-shell = {

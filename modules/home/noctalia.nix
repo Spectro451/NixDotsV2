@@ -48,8 +48,8 @@
               colorizeIcons = false;
               hideMode = "hidden";
               id = "ActiveWindow";
-              maxWidth = 200;
-              scrollingMode = "hover";
+              maxWidth = 350;
+              scrollingMode = "always";
               showIcon = true;
               showText = true;
               textColor = "none";
@@ -60,7 +60,7 @@
             {
               characterCount = 10;
               colorizeIcons = false;
-              emptyColor = "secondary";
+              emptyColor = "tertiary";
               enableScrollWheel = true;
               focusedColor = "primary";
               followFocusedScreen = true;
@@ -91,10 +91,10 @@
             }
             {
               compactMode = false;
-              hideMode = "idle";
+              hideMode = "transparent";
               hideWhenIdle = false;
               id = "MediaMini";
-              maxWidth = 180;
+              maxWidth = 200;
               panelShowAlbumArt = true;
               scrollingMode = "always";
               showAlbumArt = true;
@@ -111,7 +111,7 @@
               formatHorizontal = "HH:mm";
               formatVertical = "HH mm - dd MM";
               id = "Clock";
-              tooltipFormat = "MM/dd/yyyy";
+              tooltipFormat = "dd/MM/yyyy";
               useCustomFont = false;
             }
             {
@@ -183,7 +183,7 @@
         autoStartAuth = true;
         allowPasswordWithFprintd = true;
         clockStyle = "custom";
-        clockFormat = "HH:mm MM/dd/yyyy ";
+        clockFormat = "HH:mm dd/MM/yyyy ";
         passwordChars = true;
         lockScreenMonitors = [];
         lockScreenBlur = 0.1;
@@ -239,7 +239,7 @@
       };
       wallpaper = {
         enabled = true;
-        overviewEnabled = false;
+        overviewEnabled = true;
         directory = "/home/kiwi/NixDotsV2/assets/Wallpapers";
         monitorDirectories = [];
         enableMultiMonitorDirectories = false;
@@ -481,7 +481,7 @@
         schedulingMode = "off";
         manualSunrise = "06:30";
         manualSunset = "18:30";
-        generationMethod = "tonal-spot";
+        generationMethod = "faithful";
         monitorForColors = "";
         syncGsettings = true;
       };

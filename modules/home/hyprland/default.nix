@@ -18,7 +18,7 @@ in
       ];
       windowrule = [
         "workspace 1 silent, match:class ^(firefox)$"
-        "workspace 2 silent, match:class ^(obsidian)$"
+        "workspace 2 silent, match:initial_title ^(Obsidian)$"
         "workspace 3 silent, match:class ^(spotify)$"
         "opacity 1.0 override 0.85 override 1 override, match:title .*YouTube.*"
         "opacity 1.0 override 0.85 override 1 override, match:title .*Crunchyroll.*"
@@ -29,8 +29,8 @@ in
       ]; 
       #Env
       env = [
-        "XCURSOR_SIZE,10"
-        "HYPRCURSOR_SIZE,10"
+        "xcursor_size,10"
+        "hyprcursor_size,10"
       ];
       #Look and Feel
       general = {

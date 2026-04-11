@@ -12,6 +12,7 @@
     ./modules/home/kitty
     ./modules/home/ranger
     ./modules/home/dev.nix
+    ./modules/home/cursor.nix
   ];
 
   programs.noctalia-shell = {
@@ -27,7 +28,6 @@
     hyprshot
     brightnessctl
     wl-clipboard
-    pulseaudio
     imv
     spotify
     libreoffice-qt6-fresh

@@ -12,5 +12,4 @@
     nerd-fonts.fira-code
   ];
 
-  programs.firefox.enable = true;
 }

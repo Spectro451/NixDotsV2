@@ -47,7 +47,13 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.kiwi = import ./home.nix;
-              home-manager.extraSpecialArgs = { inherit noctalia vsExtensions lazyvim; };
+              home-manager.extraSpecialArgs = {
+                inherit
+                  noctalia
+                  vsExtensions
+                  lazyvim
+                  ;
+              };
               home-manager.backupFileExtension = "backup";
               home-manager.overwriteBackup = true;
             }
@@ -65,7 +71,13 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.kiwi = import ./home.nix;
-              home-manager.extraSpecialArgs = { inherit noctalia vsExtensions lazyvim; };
+              home-manager.extraSpecialArgs = {
+                inherit
+                  noctalia
+                  vsExtensions
+                  lazyvim
+                  ;
+              };
               home-manager.backupFileExtension = "backup";
               home-manager.overwriteBackup = true;
             }

@@ -21,6 +21,7 @@
     ./modules/home/cursor.nix
     ./modules/home/editors/vscode.nix
     ./modules/home/editors/nvim
+    ./modules/home/firefox
   ];
 
   programs.noctalia-shell = {

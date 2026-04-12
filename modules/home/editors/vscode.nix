@@ -13,6 +13,7 @@
       adpyke.codesnap
       ritwickdey.liveserver
       formulahendry.auto-rename-tag
+      unthrottled.doki-theme
       jnoortheen.nix-ide
     ];
     profiles.default.userSettings = {
@@ -22,7 +23,7 @@
       "editor.formatOnSave" = true;
       "files.autoSave" = "onFocusChange";
       "workbench.iconTheme" = "material-icon-theme";
-      "workbench.colorTheme" = "NoctaliaTheme";
+      "workbench.colorTheme" = "5412c41d-f76b-4488-85a7-1ae1a63bbfcc";
       "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
       "[nix]"."editor.formatOnSave" = true;
       "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";

@@ -9,7 +9,7 @@ in
     ./maps.nix
   ];
   programs.ranger = {
-    enable =true;
+    enable = true;
 
     settings = {
       viewmode = "miller";
@@ -92,7 +92,7 @@ in
       size_in_bytes = false;
       nested_ranger_warning = true;
     };
-    
+
     extraConfig = ''
       #EspecialKey
       map <C-r> reset

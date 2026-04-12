@@ -1,4 +1,10 @@
-{ config, pkgs, noctalia, lazyvim, ... }:
+{
+  config,
+  pkgs,
+  noctalia,
+  lazyvim,
+  ...
+}:
 {
   home.username = "kiwi";
   home.homeDirectory = "/home/kiwi";
@@ -14,7 +20,7 @@
     ./modules/home/dev.nix
     ./modules/home/cursor.nix
     ./modules/home/editors/vscode.nix
-    ./modules/home/editors/nvim.nix
+    ./modules/home/editors/nvim
   ];
 
   programs.noctalia-shell = {

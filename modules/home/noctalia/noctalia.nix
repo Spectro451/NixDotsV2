@@ -1,7 +1,15 @@
 # modules/home/noctalia.nix
-{ config, pkgs, noctalia, ... }:
 {
-  imports = [ noctalia.homeModules.default ./nvim-noctalia.nix ];
+  config,
+  pkgs,
+  noctalia,
+  ...
+}:
+{
+  imports = [
+    noctalia.homeModules.default
+    ./nvim-noctalia.nix
+  ];
 
   programs.noctalia-shell = {
     enable = true;
@@ -10,7 +18,7 @@
       bar = {
         barType = "simple";
         position = "top";
-        monitors = [];
+        monitors = [ ];
         density = "default";
         showOutline = false;
         showCapsule = true;
@@ -81,13 +89,13 @@
           ];
           right = [
             {
-              blacklist = [];
+              blacklist = [ ];
               chevronColor = "none";
               colorizeIcons = false;
               drawerEnabled = true;
               hidePassive = false;
               id = "Tray";
-              pinned = [];
+              pinned = [ ];
             }
             {
               compactMode = false;
@@ -149,7 +157,7 @@
         rightClickAction = "controlCenter";
         rightClickFollowMouse = true;
         rightClickCommand = "";
-        screenOverrides = [];
+        screenOverrides = [ ];
       };
       general = {
         avatarImage = "/home/kiwi/NixDotsV2/assets/tetoMaid.jpg";
@@ -185,7 +193,7 @@
         clockStyle = "custom";
         clockFormat = "HH:mm dd/MM/yyyy ";
         passwordChars = true;
-        lockScreenMonitors = [];
+        lockScreenMonitors = [ ];
         lockScreenBlur = 0.1;
         lockScreenTint = 0;
         keybinds = {
@@ -193,7 +201,10 @@
           keyDown = [ "Down" ];
           keyLeft = [ "Left" ];
           keyRight = [ "Right" ];
-          keyEnter = [ "Return" "Enter" ];
+          keyEnter = [
+            "Return"
+            "Enter"
+          ];
           keyEscape = [ "Esc" ];
           keyRemove = [ "Del" ];
         };
@@ -232,16 +243,25 @@
       };
       calendar = {
         cards = [
-          { enabled = true; id = "calendar-header-card"; }
-          { enabled = true; id = "calendar-month-card"; }
-          { enabled = false; id = "weather-card"; }
+          {
+            enabled = true;
+            id = "calendar-header-card";
+          }
+          {
+            enabled = true;
+            id = "calendar-month-card";
+          }
+          {
+            enabled = false;
+            id = "weather-card";
+          }
         ];
       };
       wallpaper = {
         enabled = true;
         overviewEnabled = true;
         directory = "/home/kiwi/NixDotsV2/assets/Wallpapers";
-        monitorDirectories = [];
+        monitorDirectories = [ ];
         enableMultiMonitorDirectories = false;
         showHiddenFiles = false;
         viewMode = "recursive";
@@ -255,7 +275,7 @@
         wallpaperChangeMode = "random";
         randomIntervalSec = 1200;
         transitionDuration = 800;
-        transitionType = [ "stripes"];
+        transitionType = [ "stripes" ];
         skipStartupTransition = true;
         transitionEdgeSmoothness = 0.05;
         panelPosition = "follow_bar";
@@ -275,7 +295,7 @@
         wallhavenResolutionWidth = "";
         wallhavenResolutionHeight = "";
         sortOrder = "name";
-        favorites = [];
+        favorites = [ ];
       };
       appLauncher = {
         enableClipboardHistory = false;
@@ -287,7 +307,7 @@
         clipboardWatchTextCommand = "wl-paste --type text --watch cliphist store";
         clipboardWatchImageCommand = "wl-paste --type image --watch cliphist store";
         position = "center";
-        pinnedApps = [];
+        pinnedApps = [ ];
         sortByMostUsed = true;
         terminalCommand = "kitty -e";
         customLaunchPrefixEnabled = false;
@@ -322,12 +342,30 @@
           ];
         };
         cards = [
-          { enabled = true; id = "profile-card"; }
-          { enabled = true; id = "shortcuts-card"; }
-          { enabled = true; id = "audio-card"; }
-          { enabled = true; id = "brightness-card"; }
-          { enabled = false; id = "weather-card"; }
-          { enabled = true; id = "media-sysmon-card"; }
+          {
+            enabled = true;
+            id = "profile-card";
+          }
+          {
+            enabled = true;
+            id = "shortcuts-card";
+          }
+          {
+            enabled = true;
+            id = "audio-card";
+          }
+          {
+            enabled = true;
+            id = "brightness-card";
+          }
+          {
+            enabled = false;
+            id = "weather-card";
+          }
+          {
+            enabled = true;
+            id = "media-sysmon-card";
+          }
         ];
       };
       systemMonitor = {
@@ -366,8 +404,8 @@
         floatingRatio = 1;
         size = 1;
         onlySameOutput = true;
-        monitors = [];
-        pinnedApps = [];
+        monitors = [ ];
+        pinnedApps = [ ];
         colorizeIcons = false;
         showLauncherIcon = false;
         launcherPosition = "end";
@@ -407,21 +445,69 @@
         largeButtonsStyle = true;
         largeButtonsLayout = "single-row";
         powerOptions = [
-          { action = "lock"; command = ""; countdownEnabled = true; enabled = false; keybind = ""; }
-          { action = "suspend"; command = ""; countdownEnabled = true; enabled = true; keybind = "1"; }
-          { action = "hibernate"; command = ""; countdownEnabled = true; enabled = false; keybind = ""; }
-          { action = "reboot"; command = ""; countdownEnabled = true; enabled = true; keybind = "2"; }
-          { action = "logout"; command = ""; countdownEnabled = true; enabled = true; keybind = "3"; }
-          { action = "shutdown"; command = ""; countdownEnabled = true; enabled = true; keybind = "4"; }
-          { action = "rebootToUefi"; command = ""; countdownEnabled = true; enabled = false; keybind = ""; }
-          { action = "userspaceReboot"; command = ""; countdownEnabled = true; enabled = false; keybind = ""; }
+          {
+            action = "lock";
+            command = "";
+            countdownEnabled = true;
+            enabled = false;
+            keybind = "";
+          }
+          {
+            action = "suspend";
+            command = "";
+            countdownEnabled = true;
+            enabled = true;
+            keybind = "1";
+          }
+          {
+            action = "hibernate";
+            command = "";
+            countdownEnabled = true;
+            enabled = false;
+            keybind = "";
+          }
+          {
+            action = "reboot";
+            command = "";
+            countdownEnabled = true;
+            enabled = true;
+            keybind = "2";
+          }
+          {
+            action = "logout";
+            command = "";
+            countdownEnabled = true;
+            enabled = true;
+            keybind = "3";
+          }
+          {
+            action = "shutdown";
+            command = "";
+            countdownEnabled = true;
+            enabled = true;
+            keybind = "4";
+          }
+          {
+            action = "rebootToUefi";
+            command = "";
+            countdownEnabled = true;
+            enabled = false;
+            keybind = "";
+          }
+          {
+            action = "userspaceReboot";
+            command = "";
+            countdownEnabled = true;
+            enabled = false;
+            keybind = "";
+          }
         ];
       };
       notifications = {
         enabled = true;
         enableMarkdown = false;
         density = "default";
-        monitors = [];
+        monitors = [ ];
         location = "top_right";
         overlayLayer = true;
         backgroundOpacity = 1;
@@ -454,8 +540,12 @@
         autoHideMs = 2000;
         overlayLayer = true;
         backgroundOpacity = 1;
-        enabledTypes = [ 0 1 2 ];
-        monitors = [];
+        enabledTypes = [
+          0
+          1
+          2
+        ];
+        monitors = [ ];
       };
       audio = {
         volumeStep = 5;
@@ -463,7 +553,7 @@
         spectrumFrameRate = 30;
         visualizerType = "linear";
         spectrumMirrored = true;
-        mprisBlacklist = [];
+        mprisBlacklist = [ ];
         preferredPlayer = "";
         volumeFeedback = false;
         volumeFeedbackSoundFile = "";
@@ -472,7 +562,7 @@
         brightnessStep = 5;
         enforceMinimum = true;
         enableDdcSupport = false;
-        backlightDeviceMappings = [];
+        backlightDeviceMappings = [ ];
       };
       colorSchemes = {
         useWallpaperColors = true;
@@ -487,11 +577,26 @@
       };
       templates = {
         activeTemplates = [
-          { enabled = true; id = "kitty"; }
-          { enabled = true; id = "discord"; }
-          { enabled = true; id = "hyprland"; }
-          { enabled = true; id = "code"; }
-          { enabled = true; id = "btop"; }
+          {
+            enabled = true;
+            id = "kitty";
+          }
+          {
+            enabled = true;
+            id = "discord";
+          }
+          {
+            enabled = true;
+            id = "hyprland";
+          }
+          {
+            enabled = true;
+            id = "code";
+          }
+          {
+            enabled = true;
+            id = "btop";
+          }
         ];
         enableUserTheming = true;
       };
@@ -539,7 +644,7 @@
         overviewEnabled = false;
         gridSnap = false;
         gridSnapScale = false;
-        monitorWidgets = [];
+        monitorWidgets = [ ];
       };
     };
   };

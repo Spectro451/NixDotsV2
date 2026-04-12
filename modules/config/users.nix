@@ -4,7 +4,12 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "Kiwi";
-    extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "audio"
+    ];
   };
 
   programs.zsh.enable = true;

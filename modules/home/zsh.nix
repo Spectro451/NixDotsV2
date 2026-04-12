@@ -18,7 +18,10 @@
     history.path = "$HOME/.zsh_history";
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "z" ];
+      plugins = [
+        "git"
+        "z"
+      ];
       theme = "agnoster";
     };
   };

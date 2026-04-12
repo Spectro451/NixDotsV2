@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 {
   services.xserver.enable = true;
   environment.systemPackages = [ pkgs.kasane-teto-cursors ];

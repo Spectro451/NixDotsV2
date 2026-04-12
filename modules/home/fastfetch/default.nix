@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 let
   #colores bonitos
@@ -7,12 +7,12 @@ let
   purpleDark = "734f9a";
   purpleLight = "965fd4";
   darkBg = "4b4a52";
-  
+
   #inicio seccion
   header = {
-  type = "custom";
-  format = "┌{\$1}{\$1}┐";
-  outputColor = "90";
+    type = "custom";
+    format = "┌{\$1}{\$1}┐";
+    outputColor = "90";
   };
   #fin seccion
   footer = {
@@ -24,15 +24,14 @@ let
   #ColorBar
   ColorBar = {
     type = "custom";
-    format = 
-      "{##${greenDark}}  {##${greenBright}}  {##${purpleDark}}  {##${purpleLight}}  {##${darkBg}}  "+
-      "{##${purpleLight}}  {##${purpleDark}}  {##${greenBright}}  {##${greenDark}}  {##${darkBg}}  "+
-      "{##${greenDark}}  {##${greenBright}}  {##${purpleDark}}  {##${purpleLight}}  {##${darkBg}}  "+
-      "{##${purpleLight}}  {##${purpleDark}}  {##${greenBright}}  {##${greenDark}}  {##${darkBg}}  "+
-      "{##${purpleDark}} "
-    ;
+    format =
+      "{##${greenDark}}  {##${greenBright}}  {##${purpleDark}}  {##${purpleLight}}  {##${darkBg}}  "
+      + "{##${purpleLight}}  {##${purpleDark}}  {##${greenBright}}  {##${greenDark}}  {##${darkBg}}  "
+      + "{##${greenDark}}  {##${greenBright}}  {##${purpleDark}}  {##${purpleLight}}  {##${darkBg}}  "
+      + "{##${purpleLight}}  {##${purpleDark}}  {##${greenBright}}  {##${greenDark}}  {##${darkBg}}  "
+      + "{##${purpleDark}} ";
   };
-in 
+in
 {
   programs.fastfetch = {
     enable = true;
@@ -40,7 +39,10 @@ in
       logo = {
         source = "${config.home.homeDirectory}/.config/fastfetch/logo/punpun.png";
         type = "kitty";
-        padding = { top = 2; left = 4;};
+        padding = {
+          top = 2;
+          left = 4;
+        };
         width = 50;
       };
       ascii = {
@@ -165,13 +167,13 @@ in
           type = "sound";
           key = " SND";
           keyColor = "cyan";
-	        format = "{name:38} ({3})";
+          format = "{name:38} ({3})";
         }
         {
           type = "player";
           key = "│ ├󰥠";
           keyColor = "cyan";
-	        format = "{1}";
+          format = "{1}";
         }
         {
           type = "media";
@@ -184,4 +186,3 @@ in
     };
   };
 }
-

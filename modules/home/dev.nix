@@ -21,6 +21,10 @@
 
     # API
     #postman
+
+    # Formatters
+    nixfmt
+    prettierd
   ];
 
   # Java

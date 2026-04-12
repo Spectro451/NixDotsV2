@@ -26,7 +26,7 @@ in
         "opacity 1.0 override 0.85 override 1 override, match:title .*Max.*"
         "suppress_event maximize, match:class .*"
         "no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0"
-      ]; 
+      ];
       #Env
       env = [
         "xcursor_size,10"
@@ -37,9 +37,6 @@ in
         gaps_in = 2;
         gaps_out = 6;
         border_size = 2;
-        #Bordes Eva-01 style
-        "col.active_border" = "rgba(965fd4ff) rgba(8bd450ff) 45deg";
-        "col.inactive_border" = "rgba(3f6d4eee)";
         resize_on_border = true;
         allow_tearing = true;
         layout = "dwindle";

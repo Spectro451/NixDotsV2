@@ -2,7 +2,7 @@
 
 let
   ranger = pkgs.ranger;
-in 
+in
 {
   programs.ranger = {
     mappings = {
@@ -36,7 +36,7 @@ in
       Ms = "linemode sizemtime";
       MH = "linemode sizehumanreadablemtime";
       Mt = "linemode metatitle";
-     
+
       #Jumping vim
       H = "history_go -1";
       L = "history_go 1";

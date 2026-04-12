@@ -12,7 +12,10 @@
     ./modules/config/steam.nix
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
   services.printing.enable = false;
   system.stateVersion = "25.05";

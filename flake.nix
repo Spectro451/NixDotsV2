@@ -11,8 +11,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    lazyvim.url = "github:pfassina/lazyvim-nix";
   };
-  outputs = { self, nixpkgs, home-manager, noctalia, nix-vscode-extensions, ... }:
+  outputs = { self, nixpkgs, home-manager, noctalia, nix-vscode-extensions, lazyvim, ... }:
   let
     system = "x86_64-linux";
     vsExtensions = nix-vscode-extensions.extensions.${system};
@@ -36,7 +37,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.kiwi = import ./home.nix;
-            home-manager.extraSpecialArgs = { inherit noctalia vsExtensions; };
+            home-manager.extraSpecialArgs = { inherit noctalia vsExtensions lazyvim; };
             home-manager.backupFileExtension = "backup";
             home-manager.overwriteBackup = true;
           }
@@ -54,7 +55,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.kiwi = import ./home.nix;
-            home-manager.extraSpecialArgs = { inherit noctalia vsExtensions; };
+            home-manager.extraSpecialArgs = { inherit noctalia vsExtensions lazyvim; };
             home-manager.backupFileExtension = "backup";
             home-manager.overwriteBackup = true;
           }

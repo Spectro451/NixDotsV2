@@ -1,7 +1,7 @@
 # modules/home/noctalia.nix
 { config, pkgs, noctalia, ... }:
 {
-  imports = [ noctalia.homeModules.default ];
+  imports = [ noctalia.homeModules.default ./nvim-noctalia.nix ];
 
   programs.noctalia-shell = {
     enable = true;
@@ -493,7 +493,7 @@
           { enabled = true; id = "code"; }
           { enabled = true; id = "btop"; }
         ];
-        enableUserTheming = false;
+        enableUserTheming = true;
       };
       nightLight = {
         enabled = false;

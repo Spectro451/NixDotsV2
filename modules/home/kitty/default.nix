@@ -12,5 +12,8 @@
       confirm_os_window_close = 0;
       close_on_child_death = true;
     };
+    extraConfig = ''
+      include themes/noctalia.conf
+    '';
   };
 }

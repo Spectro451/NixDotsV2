@@ -1,11 +1,11 @@
-{ config, pkgs, noctalia, ... }:
+{ config, pkgs, noctalia, lazyvim, ... }:
 {
   home.username = "kiwi";
   home.homeDirectory = "/home/kiwi";
   home.stateVersion = "25.05";
 
   imports = [
-    ./modules/home/noctalia.nix
+    ./modules/home/noctalia/noctalia.nix
     ./modules/home/zsh.nix
     ./modules/home/hyprland
     ./modules/home/fastfetch
@@ -13,7 +13,8 @@
     ./modules/home/ranger
     ./modules/home/dev.nix
     ./modules/home/cursor.nix
-    ./modules/home/vscode.nix
+    ./modules/home/editors/vscode.nix
+    ./modules/home/editors/nvim.nix
   ];
 
   programs.noctalia-shell = {
@@ -22,7 +23,6 @@
 
   home.packages = with pkgs; [
     ranger
-    neovim
     btop
     discord
     fastfetch

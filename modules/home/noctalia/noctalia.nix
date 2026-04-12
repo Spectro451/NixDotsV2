@@ -99,7 +99,7 @@
             }
             {
               compactMode = false;
-              hideMode = "transparent";
+              hideMode = "hidden";
               hideWhenIdle = false;
               id = "MediaMini";
               maxWidth = 200;
@@ -260,7 +260,7 @@
       wallpaper = {
         enabled = true;
         overviewEnabled = true;
-        directory = "/home/kiwi/NixDotsV2/assets/Wallpapers";
+        directory = "/home/kiwi/NixDotsV2/assets/Wallpapers/";
         monitorDirectories = [ ];
         enableMultiMonitorDirectories = false;
         showHiddenFiles = false;
@@ -528,7 +528,7 @@
           criticalSoundFile = "";
           normalSoundFile = "";
           lowSoundFile = "";
-          excludedApps = "discord,firefox,chrome,chromium,edge";
+          excludedApps = "firefox,chrome,chromium,edge";
         };
         enableMediaToast = false;
         enableKeyboardLayoutToast = false;

@@ -11,5 +11,6 @@
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
   ];
+  services.udisks2.enable = true;
 
 }

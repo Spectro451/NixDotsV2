@@ -1,4 +1,3 @@
-# modules/home/noctalia.nix
 {
   config,
   pkgs,

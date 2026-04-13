@@ -27,6 +27,7 @@
   programs.noctalia-shell = {
     enable = true;
   };
+  programs.vesktop.enable = true;
 
   home.packages = with pkgs; [
     ranger

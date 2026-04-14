@@ -22,6 +22,7 @@
     ./modules/home/editors/vscode.nix
     ./modules/home/editors/nvim
     ./modules/home/firefox
+    ./modules/home/thunar
   ];
 
   programs.noctalia-shell = {
@@ -45,7 +46,6 @@
     protonup-qt
     syncthing
     obsidian
-    thunar
   ];
 
   home.file = {

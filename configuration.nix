@@ -10,6 +10,7 @@
     ./modules/config/sound.nix
     ./modules/config/session-variables.nix
     ./modules/config/steam.nix
+    ./modules/config/thunar.nix
   ];
 
   nix.settings.experimental-features = [

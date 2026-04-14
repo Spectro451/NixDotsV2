@@ -8,6 +8,7 @@
   imports = [
     noctalia.homeModules.default
     ./nvim-noctalia.nix
+    ./plugins.nix
   ];
 
   programs.noctalia-shell = {
@@ -88,15 +89,6 @@
           ];
           right = [
             {
-              blacklist = [ ];
-              chevronColor = "none";
-              colorizeIcons = false;
-              drawerEnabled = true;
-              hidePassive = false;
-              id = "Tray";
-              pinned = [ ];
-            }
-            {
               compactMode = false;
               hideMode = "hidden";
               hideWhenIdle = false;
@@ -112,6 +104,19 @@
               useFixedWidth = false;
               visualizerType = "linear";
             }
+            {
+              id = "plugin:usb-drive-manager";
+            }
+            {
+              blacklist = [ ];
+              chevronColor = "none";
+              colorizeIcons = false;
+              drawerEnabled = true;
+              hidePassive = false;
+              id = "Tray";
+              pinned = [ ];
+            }
+
             {
               clockColor = "none";
               customFont = "";
@@ -599,6 +604,10 @@
           {
             enabled = true;
             id = "pywalfox";
+          }
+          {
+            enabled = true;
+            id = "gtk";
           }
         ];
         enableUserTheming = true;

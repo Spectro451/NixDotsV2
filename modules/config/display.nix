@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  services.xserver.enable = true;
   environment.systemPackages = [ pkgs.kasane-teto-cursors ];
   services.displayManager.sddm = {
     enable = true;

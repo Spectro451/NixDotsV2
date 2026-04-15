@@ -7,7 +7,7 @@
 {
   imports = [
     noctalia.homeModules.default
-    ./nvim-noctalia.nix
+    ./user-templates.nix
     ./plugins.nix
   ];
 

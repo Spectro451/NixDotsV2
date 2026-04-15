@@ -1,8 +1,4 @@
-{ config, pkgs, ... }:
-
-let
-  ranger = pkgs.ranger;
-in
+{ pkgs, ... }:
 {
   programs.ranger = {
     mappings = {
@@ -71,7 +67,7 @@ in
       gr = "cd /";
       gR = "eval fm.cd(ranger.RANGERDIR)";
       "/" = "cd /";
-      "g?" = "cd ${ranger}/share/doc/ranger/";
+      "g?" = "cd ${pkgs.ranger}/share/doc/ranger/";
 
       #External
       E = "edit";

@@ -10,8 +10,14 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    lazyvim.url = "github:pfassina/lazyvim-nix";
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    lazyvim = {
+      url = "github:pfassina/lazyvim-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {
@@ -32,57 +38,37 @@
           ln -s ${./assets/cursors/kasane-teto-cursors} $out/share/icons/kasane-teto-cursors
         '';
       };
+      mkHost =
+        hostModule:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit noctalia; };
+          modules = [
+            { nixpkgs.overlays = [ kasaneCursorOverlay ]; }
+            ./configuration.nix
+            hostModule
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.kiwi = import ./home.nix;
+              home-manager.extraSpecialArgs = {
+                inherit
+                  noctalia
+                  vsExtensions
+                  lazyvim
+                  ;
+              };
+              home-manager.backupFileExtension = "backup";
+              home-manager.overwriteBackup = true;
+            }
+          ];
+        };
     in
     {
       nixosConfigurations = {
-        KiwiPC = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = { inherit noctalia; };
-          modules = [
-            { nixpkgs.overlays = [ kasaneCursorOverlay ]; }
-            ./configuration.nix
-            ./hosts/KiwiPC.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.kiwi = import ./home.nix;
-              home-manager.extraSpecialArgs = {
-                inherit
-                  noctalia
-                  vsExtensions
-                  lazyvim
-                  ;
-              };
-              home-manager.backupFileExtension = "backup";
-              home-manager.overwriteBackup = true;
-            }
-          ];
-        };
-        KiwiNote = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = { inherit noctalia; };
-          modules = [
-            { nixpkgs.overlays = [ kasaneCursorOverlay ]; }
-            ./configuration.nix
-            ./hosts/KiwiNote.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.kiwi = import ./home.nix;
-              home-manager.extraSpecialArgs = {
-                inherit
-                  noctalia
-                  vsExtensions
-                  lazyvim
-                  ;
-              };
-              home-manager.backupFileExtension = "backup";
-              home-manager.overwriteBackup = true;
-            }
-          ];
-        };
+        KiwiPC = mkHost ./hosts/KiwiPC.nix;
+        KiwiNote = mkHost ./hosts/KiwiNote.nix;
       };
     };
 }

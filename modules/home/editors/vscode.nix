@@ -1,4 +1,18 @@
-{ pkgs, vsExtensions, ... }:
+{
+  pkgs,
+  vsExtensions,
+  lib,
+  noctalia,
+  ...
+}:
+let
+  # El template "code" de Noctalia no se registra en theming.dynamic.toml porque el proceso de deteccion
+  # de la extension falla en setups declarativos (Nix). La solucion fue:
+  # 1. Copiar la extension a una ubicacion mutable via home.activation
+  # 2. Usar un user-template que apunte directamente al theme file de la extension copiada
+  noctaliaExt = vsExtensions.vscode-marketplace.noctalia.noctaliatheme;
+  extDest = "$HOME/.vscode-oss/extensions/noctalia.noctaliatheme-0.0.5-universal";
+in
 {
   programs.vscode = {
     enable = true;
@@ -18,12 +32,11 @@
     ];
     profiles.default.userSettings = {
       "editor.tabSize" = 2;
-      "editor.formatOnFocusChange" = true;
       "editor.defaultFormatter" = "esbenp.prettier-vscode";
       "editor.formatOnSave" = true;
       "files.autoSave" = "onFocusChange";
       "workbench.iconTheme" = "material-icon-theme";
-      "workbench.colorTheme" = "5412c41d-f76b-4488-85a7-1ae1a63bbfcc";
+      "workbench.colorTheme" = "NoctaliaTheme";
       "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
       "[nix]"."editor.formatOnSave" = true;
       "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
@@ -31,4 +44,10 @@
       "nix.formatterPath" = "nixfmt";
     };
   };
+
+  home.activation.noctaliaThemeExt = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    rm -rf "${extDest}"
+    cp -r ${noctaliaExt}/share/vscode/extensions/noctalia.noctaliatheme "${extDest}"
+    chmod -R u+w "${extDest}"
+  '';
 }

@@ -18,6 +18,6 @@
     "flakes"
   ];
   nixpkgs.config.allowUnfree = true;
-  services.printing.enable = false;
+  services.printing.enable = true;
   system.stateVersion = "25.05";
 }

@@ -6,21 +6,22 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initContent = ''
-      clear
-      sleep 0.1
       fastfetch
     '';
     shellAliases = {
       ll = "ls -l";
       edit = "sudo -E ranger";
     };
-    history.size = 1500;
-    history.path = "$HOME/.zsh_history";
+    history = {
+      size = 1500;
+    };
     oh-my-zsh = {
       enable = true;
       plugins = [
         "git"
         "z"
+        "sudo"
+        "extract"
       ];
       theme = "agnoster";
     };

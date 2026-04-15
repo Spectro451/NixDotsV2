@@ -1,9 +1,12 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 {
   imports = [ ./KiwiPC-hardware.nix ];
   networking.hostName = "KiwiPC";
 
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
@@ -11,6 +14,5 @@
     open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-    powerManagement.enable = false;
   };
 }

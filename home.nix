@@ -17,7 +17,7 @@
     ./modules/home/fastfetch
     ./modules/home/kitty
     ./modules/home/ranger
-    ./modules/home/dev.nix
+    ./modules/home/dev
     ./modules/home/cursor.nix
     ./modules/home/editors/vscode.nix
     ./modules/home/editors/nvim
@@ -31,10 +31,8 @@
   programs.vesktop.enable = true;
 
   home.packages = with pkgs; [
-    ranger
     btop
     discord
-    fastfetch
     hyprshot
     brightnessctl
     wl-clipboard
@@ -44,7 +42,6 @@
     imagemagick
     mpv
     protonup-qt
-    syncthing
     obsidian
   ];
 

@@ -19,7 +19,7 @@ return {
       },
     },
     init = function()
-      vim.api.nvim_create_autocmd({ "FocusLost", "BufLeave" }, {
+      vim.api.nvim_create_autocmd({ "BufWritePre", "FocusLost", "BufLeave" }, {
         group = vim.api.nvim_create_augroup("ConformAutoFormat", { clear = true }),
         callback = function(ev)
           require("conform").format({ bufnr = ev.buf, lsp_format = "fallback" })

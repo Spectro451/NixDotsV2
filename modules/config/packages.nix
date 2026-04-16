@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     nano
     curl
@@ -12,6 +15,7 @@
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
+    noto-fonts-cjk-sans
   ];
   services = {
     udisks2.enable = true;

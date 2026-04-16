@@ -1,6 +1,5 @@
-{ ... }:
-{
-  imports = [ ./KiwiNote-hardware.nix ];
+{...}: {
+  imports = [./KiwiNote-hardware.nix];
   networking.hostName = "KiwiNote";
   hardware.graphics.enable = true;
   hardware.bluetooth.enable = true;

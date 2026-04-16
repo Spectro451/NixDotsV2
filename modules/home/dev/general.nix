@@ -3,7 +3,7 @@
   home.packages = with pkgs; [
     gcc
     tree-sitter
-    nixfmt
+    alejandra
     prettierd
     claude-code
     #docker

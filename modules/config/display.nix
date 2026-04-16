@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  environment.systemPackages = [ pkgs.kasane-teto-cursors ];
+{pkgs, ...}: {
+  environment.systemPackages = [pkgs.kasane-teto-cursors];
   services.displayManager.sddm = {
     enable = true;
     package = pkgs.kdePackages.sddm;

@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   users.users.kiwi = {
     isNormalUser = true;
     shell = pkgs.zsh;

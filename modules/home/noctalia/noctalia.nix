@@ -3,8 +3,7 @@
   pkgs,
   noctalia,
   ...
-}:
-{
+}: {
   imports = [
     noctalia.homeModules.default
     ./user-templates.nix
@@ -18,7 +17,7 @@
       bar = {
         barType = "simple";
         position = "top";
-        monitors = [ ];
+        monitors = [];
         density = "default";
         showOutline = false;
         showCapsule = true;
@@ -108,13 +107,13 @@
               id = "plugin:usb-drive-manager";
             }
             {
-              blacklist = [ ];
+              blacklist = [];
               chevronColor = "none";
               colorizeIcons = false;
               drawerEnabled = true;
               hidePassive = false;
               id = "Tray";
-              pinned = [ ];
+              pinned = [];
             }
 
             {
@@ -161,7 +160,7 @@
         rightClickAction = "controlCenter";
         rightClickFollowMouse = true;
         rightClickCommand = "";
-        screenOverrides = [ ];
+        screenOverrides = [];
       };
       general = {
         avatarImage = "/home/kiwi/NixDotsV2/assets/tetoMaid.jpg";
@@ -197,20 +196,20 @@
         clockStyle = "custom";
         clockFormat = "HH:mm dd/MM/yyyy ";
         passwordChars = true;
-        lockScreenMonitors = [ ];
+        lockScreenMonitors = [];
         lockScreenBlur = 0.1;
         lockScreenTint = 0;
         keybinds = {
-          keyUp = [ "Up" ];
-          keyDown = [ "Down" ];
-          keyLeft = [ "Left" ];
-          keyRight = [ "Right" ];
+          keyUp = ["Up"];
+          keyDown = ["Down"];
+          keyLeft = ["Left"];
+          keyRight = ["Right"];
           keyEnter = [
             "Return"
             "Enter"
           ];
-          keyEscape = [ "Esc" ];
-          keyRemove = [ "Del" ];
+          keyEscape = ["Esc"];
+          keyRemove = ["Del"];
         };
         reverseScroll = false;
         smoothScrollEnabled = true;
@@ -265,7 +264,7 @@
         enabled = true;
         overviewEnabled = true;
         directory = "/home/kiwi/NixDotsV2/assets/Wallpapers/";
-        monitorDirectories = [ ];
+        monitorDirectories = [];
         enableMultiMonitorDirectories = false;
         showHiddenFiles = false;
         viewMode = "recursive";
@@ -279,7 +278,7 @@
         wallpaperChangeMode = "random";
         randomIntervalSec = 1200;
         transitionDuration = 800;
-        transitionType = [ "stripes" ];
+        transitionType = ["stripes"];
         skipStartupTransition = true;
         transitionEdgeSmoothness = 0.05;
         panelPosition = "follow_bar";
@@ -299,7 +298,7 @@
         wallhavenResolutionWidth = "";
         wallhavenResolutionHeight = "";
         sortOrder = "name";
-        favorites = [ ];
+        favorites = [];
       };
       appLauncher = {
         enableClipboardHistory = false;
@@ -311,7 +310,7 @@
         clipboardWatchTextCommand = "wl-paste --type text --watch cliphist store";
         clipboardWatchImageCommand = "wl-paste --type image --watch cliphist store";
         position = "center";
-        pinnedApps = [ ];
+        pinnedApps = [];
         sortByMostUsed = true;
         terminalCommand = "kitty -e";
         customLaunchPrefixEnabled = false;
@@ -333,16 +332,16 @@
         diskPath = "/";
         shortcuts = {
           left = [
-            { id = "Network"; }
-            { id = "Bluetooth"; }
-            { id = "WallpaperSelector"; }
-            { id = "NoctaliaPerformance"; }
+            {id = "Network";}
+            {id = "Bluetooth";}
+            {id = "WallpaperSelector";}
+            {id = "NoctaliaPerformance";}
           ];
           right = [
-            { id = "Notifications"; }
-            { id = "PowerProfile"; }
-            { id = "KeepAwake"; }
-            { id = "NightLight"; }
+            {id = "Notifications";}
+            {id = "PowerProfile";}
+            {id = "KeepAwake";}
+            {id = "NightLight";}
           ];
         };
         cards = [
@@ -408,8 +407,8 @@
         floatingRatio = 1;
         size = 1;
         onlySameOutput = true;
-        monitors = [ ];
-        pinnedApps = [ ];
+        monitors = [];
+        pinnedApps = [];
         colorizeIcons = false;
         showLauncherIcon = false;
         launcherPosition = "end";
@@ -511,7 +510,7 @@
         enabled = true;
         enableMarkdown = false;
         density = "default";
-        monitors = [ ];
+        monitors = [];
         location = "top_right";
         overlayLayer = true;
         backgroundOpacity = 1;
@@ -549,7 +548,7 @@
           1
           2
         ];
-        monitors = [ ];
+        monitors = [];
       };
       audio = {
         volumeStep = 5;
@@ -557,7 +556,7 @@
         spectrumFrameRate = 30;
         visualizerType = "linear";
         spectrumMirrored = true;
-        mprisBlacklist = [ ];
+        mprisBlacklist = [];
         preferredPlayer = "";
         volumeFeedback = false;
         volumeFeedbackSoundFile = "";
@@ -566,7 +565,7 @@
         brightnessStep = 5;
         enforceMinimum = true;
         enableDdcSupport = false;
-        backlightDeviceMappings = [ ];
+        backlightDeviceMappings = [];
       };
       colorSchemes = {
         useWallpaperColors = true;
@@ -608,6 +607,10 @@
           {
             enabled = true;
             id = "gtk";
+          }
+          {
+            enabled = true;
+            id = "spicetify";
           }
         ];
         enableUserTheming = true;
@@ -656,7 +659,7 @@
         overviewEnabled = false;
         gridSnap = false;
         gridSnapScale = false;
-        monitorWidgets = [ ];
+        monitorWidgets = [];
       };
     };
   };

@@ -3,9 +3,9 @@
   pkgs,
   noctalia,
   lazyvim,
+  spicetify-nix,
   ...
-}:
-{
+}: {
   home.username = "kiwi";
   home.homeDirectory = "/home/kiwi";
   home.stateVersion = "25.05";
@@ -23,6 +23,7 @@
     ./modules/home/editors/nvim
     ./modules/home/firefox
     ./modules/home/thunar
+    ./modules/home/spotify
   ];
 
   programs.noctalia-shell = {
@@ -32,17 +33,16 @@
 
   home.packages = with pkgs; [
     btop
-    discord
     hyprshot
     brightnessctl
     wl-clipboard
     imv
-    spotify
     libreoffice-qt6-fresh
     imagemagick
     mpv
     protonup-qt
     obsidian
+    pywal
   ];
 
   home.file = {

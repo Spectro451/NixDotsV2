@@ -9,4 +9,5 @@
   services.upower.enable = true;
   # Fingerprint
   services.fprintd.enable = true;
+  security.pam.services.sudo.fprintAuth = true;
 }

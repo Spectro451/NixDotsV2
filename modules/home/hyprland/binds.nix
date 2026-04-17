@@ -1,9 +1,7 @@
-{ ... }:
-let
+{...}: let
   terminal = "kitty";
   filemanager = "kitty -e sudo -E ranger";
-in
-{
+in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       #Comunes

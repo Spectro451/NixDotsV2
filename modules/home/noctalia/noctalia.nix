@@ -612,6 +612,10 @@
             enabled = true;
             id = "spicetify";
           }
+          {
+            enabled = true;
+            id = "yazi";
+          }
         ];
         enableUserTheming = true;
       };

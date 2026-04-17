@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./look.nix
     ./input.nix
@@ -9,11 +8,12 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    systemd.enable = false;
     extraConfig = ''
       source = ~/.config/hypr/noctalia/noctalia-colors.conf
     '';
     settings = {
-      monitor = [ ",1920x1080@165,auto,1" ];
+      monitor = [",1920x1080@165,auto,1"];
       env = [
         "xcursor_size,20"
         "hyprcursor_size,20"

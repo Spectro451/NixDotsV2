@@ -1,6 +1,6 @@
 {...}: let
   terminal = "kitty";
-  filemanager = "kitty -e sudo -E ranger";
+  filemanager = "kitty -e yazi";
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [

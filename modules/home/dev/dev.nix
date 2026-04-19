@@ -12,15 +12,4 @@
     #postman
     #python3
   ];
-
-  # MySQL
-  #services.mysql = {
-  #  enable = true;
-  #  package = pkgs.mysql80;
-  #};
-
-  # PostgreSQL
-  #services.postgresql = {
-  #  enable = true;
-  #};
 }

@@ -9,7 +9,7 @@
     nest-cli
 
     # Tools
-    #postman
+    postman
     #python3
   ];
 }

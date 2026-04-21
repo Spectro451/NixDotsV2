@@ -163,7 +163,7 @@
         screenOverrides = [];
       };
       general = {
-        avatarImage = "/home/kiwi/NixDotsV2/assets/tetoMaid.jpg";
+        avatarImage = "${config.home.homeDirectory}/NixDotsV2/assets/tetoMaid.jpg";
         dimmerOpacity = 0.1;
         showScreenCorners = false;
         forceBlackScreenCorners = false;
@@ -263,7 +263,7 @@
       wallpaper = {
         enabled = true;
         overviewEnabled = true;
-        directory = "/home/kiwi/NixDotsV2/assets/Wallpapers/";
+        directory = "${config.home.homeDirectory}/NixDotsV2/assets/Wallpapers/";
         monitorDirectories = [];
         enableMultiMonitorDirectories = false;
         showHiddenFiles = false;

@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -10,7 +13,7 @@
     '';
     shellAliases = {
       ll = "ls -l";
-      edit = "sudo -E ranger";
+      edit = "sudo -E yazi";
     };
     history = {
       size = 1500;

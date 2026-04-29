@@ -20,5 +20,6 @@
   services = {
     udisks2.enable = true;
     gvfs.enable = true;
+    tailscale.enable = true;
   };
 }

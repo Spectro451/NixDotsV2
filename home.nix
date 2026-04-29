@@ -43,6 +43,7 @@
     protonup-qt
     obsidian
     pywal
+    prismlauncher
   ];
 
   home.file = {

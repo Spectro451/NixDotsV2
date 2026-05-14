@@ -5,8 +5,4 @@
   programs.firefox.nativeMessagingHosts = [
     pkgs.pywalfox-native
   ];
-
-  home.packages = [
-    pkgs.pywalfox-native
-  ];
 }

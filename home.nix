@@ -14,6 +14,7 @@
     ./modules/home/noctalia/noctalia.nix
     ./modules/home/zsh.nix
     ./modules/home/hyprland
+    ./modules/home/niri
     ./modules/home/fastfetch
     ./modules/home/kitty
     ./modules/home/dev
@@ -26,9 +27,6 @@
     ./modules/home/yazi
   ];
 
-  programs.noctalia-shell = {
-    enable = true;
-  };
   programs.vesktop.enable = true;
 
   home.packages = with pkgs; [
@@ -44,6 +42,7 @@
     obsidian
     pywal
     prismlauncher
+    xwayland-satellite
   ];
 
   home.file = {

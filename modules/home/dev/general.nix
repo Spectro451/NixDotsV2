@@ -9,7 +9,7 @@
     alejandra
     prettierd
     stylua
-    claude-code
+    opencode
     #docker
   ];
 }

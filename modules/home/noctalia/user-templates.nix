@@ -3,7 +3,7 @@
   noctalia,
   ...
 }: let
-  noctaliaShell = noctalia.packages.x86_64-linux.default;
+  noctaliaShell = noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in {
   programs.noctalia-shell.user-templates.templates = {
     # metodo super incomodo y estupido que tuve que usar para poder tener mi paleta de colores inyectada por noctalia

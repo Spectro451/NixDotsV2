@@ -20,6 +20,11 @@
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
   outputs = {
@@ -30,6 +35,7 @@
     nix-vscode-extensions,
     lazyvim,
     spicetify-nix,
+    niri,
     ...
   }: let
     system = "x86_64-linux";
@@ -45,9 +51,10 @@
         inherit system;
         specialArgs = {inherit noctalia;};
         modules = [
-          {nixpkgs.overlays = [kasaneCursorOverlay];}
+          {nixpkgs.overlays = [kasaneCursorOverlay niri.overlays.niri];}
           ./configuration.nix
           hostModule
+          niri.nixosModules.niri
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

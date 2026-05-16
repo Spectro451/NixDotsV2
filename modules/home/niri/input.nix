@@ -1,10 +1,15 @@
-{ ... }: {
-  programs.niri.settings.input = {
-    keyboard.xkb.layout = "latam";
-    touchpad = {
-      tap = true;
-      natural-scroll = false;
+{...}: {
+  programs.niri.settings = {
+    input = {
+      keyboard = {
+        xkb.layout = "latam";
+        numlock = true;
+      };
+      touchpad = {
+        tap = true;
+        natural-scroll = true;
+      };
     };
-    mouse.accel-speed = 0.0;
+    cursor.size = 20;
   };
 }

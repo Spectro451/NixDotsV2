@@ -12,7 +12,7 @@ in {
       "SUPER, V, togglefloating"
       "SUPER, R, exec, noctalia-shell ipc call launcher toggle"
       "SUPER, P, pseudo"
-      "SUPER, J, togglesplit"
+      "SUPER, J, layoutmsg, togglesplit"
       "SUPER, F, fullscreen"
       #Focus
       "SUPER, left, movefocus, l"

@@ -8,7 +8,7 @@
 }: {
   home.username = "kiwi";
   home.homeDirectory = "/home/kiwi";
-  home.stateVersion = "25.05";
+  home.stateVersion = "26.05";
 
   imports = [
     ./modules/home/noctalia/noctalia.nix

@@ -8,6 +8,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "hyprlang";
     systemd.enable = false;
     extraConfig = ''
       source = ~/.config/hypr/noctalia/noctalia-colors.conf

@@ -1,11 +1,9 @@
 {
-  pkgs,
   vsExtensions,
   ...
 }: {
-  programs.vscode = {
+  programs.vscodium = {
     enable = true;
-    package = pkgs.vscodium;
     profiles.default.extensions = with vsExtensions.open-vsx; [
       esbenp.prettier-vscode
       pkief.material-icon-theme

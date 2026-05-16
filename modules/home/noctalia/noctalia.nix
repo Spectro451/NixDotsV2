@@ -641,7 +641,7 @@
         colorGeneration = "";
       };
       plugins = {
-        autoUpdate = false;
+        autoUpdate = true;
         notifyUpdates = true;
       };
       idle = {

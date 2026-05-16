@@ -9,6 +9,13 @@ in {
   ];
 
   programs.niri.settings = {
+    outputs."DP-2" = {
+      mode = {
+        width = 1920;
+        height = 1080;
+      };
+    };
+
     spawn-at-startup = [
       { argv = ["noctalia-shell"]; }
       { argv = [vars.browser]; }

@@ -9,7 +9,6 @@
     alejandra
     prettierd
     stylua
-    opencode
     #docker
   ];
 }

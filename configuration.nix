@@ -8,7 +8,6 @@
     ./modules/config/locale.nix
     ./modules/config/display.nix
     ./modules/config/hyprland.nix
-    ./modules/config/niri.nix
     ./modules/config/users.nix
     ./modules/config/packages.nix
     ./modules/config/sound.nix

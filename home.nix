@@ -14,7 +14,6 @@
     ./modules/home/noctalia/noctalia.nix
     ./modules/home/zsh.nix
     ./modules/home/hyprland
-    ./modules/home/niri
     ./modules/home/fastfetch
     ./modules/home/kitty
     ./modules/home/dev
@@ -42,7 +41,6 @@
     obsidian
     pywal
     prismlauncher
-    xwayland-satellite
   ];
 
   home.file = {

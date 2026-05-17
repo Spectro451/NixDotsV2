@@ -1,10 +1,11 @@
 {
-  vsExtensions,
+  pkgs,
+  inputs,
   ...
 }: {
   programs.vscodium = {
     enable = true;
-    profiles.default.extensions = with vsExtensions.open-vsx; [
+    profiles.default.extensions = with inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx; [
       esbenp.prettier-vscode
       pkief.material-icon-theme
       aaron-bond.better-comments

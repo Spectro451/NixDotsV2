@@ -1,8 +1,8 @@
-{lazyvim, ...}: let
+{inputs, ...}: let
   colorschemePlugins = builtins.readFile ./colorscheme.lua;
   editorPlugins = builtins.readFile ./editor.lua;
 in {
-  imports = [lazyvim.homeManagerModules.default];
+  imports = [inputs.lazyvim.homeManagerModules.default];
 
   programs.neovim = {
     enable = true;

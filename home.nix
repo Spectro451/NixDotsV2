@@ -1,9 +1,7 @@
 {
   config,
   pkgs,
-  noctalia,
-  lazyvim,
-  spicetify-nix,
+  inputs,
   ...
 }: {
   home.username = "kiwi";

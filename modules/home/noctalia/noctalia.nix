@@ -1,11 +1,11 @@
 {
   config,
   pkgs,
-  noctalia,
+  inputs,
   ...
 }: {
   imports = [
-    noctalia.homeModules.default
+    inputs.noctalia.homeModules.default
     ./user-templates.nix
     ./plugins.nix
   ];

@@ -23,18 +23,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    noctalia,
-    nix-vscode-extensions,
-    lazyvim,
-    spicetify-nix,
-    ...
-  }: let
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
     system = "x86_64-linux";
-    vsExtensions = nix-vscode-extensions.extensions.${system};
     kasaneCursorOverlay = final: prev: {
       kasane-teto-cursors = prev.runCommand "kasane-teto-cursor" {} ''
         mkdir -p $out/share/icons
@@ -44,7 +34,7 @@
     mkHost = hostModule:
       nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit noctalia;};
+        specialArgs = { inherit inputs; };
         modules = [
           {nixpkgs.overlays = [kasaneCursorOverlay];}
           ./configuration.nix
@@ -54,14 +44,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.kiwi = import ./home.nix;
-            home-manager.extraSpecialArgs = {
-              inherit
-                noctalia
-                vsExtensions
-                lazyvim
-                spicetify-nix
-                ;
-            };
+            home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.backupFileExtension = "backup";
             home-manager.overwriteBackup = true;
           }

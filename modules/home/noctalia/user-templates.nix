@@ -1,9 +1,9 @@
 {
   pkgs,
-  noctalia,
+  inputs,
   ...
 }: let
-  noctaliaShell = noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  noctaliaShell = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in {
   programs.noctalia-shell.user-templates.templates = {
     # metodo super incomodo y estupido que tuve que usar para poder tener mi paleta de colores inyectada por noctalia

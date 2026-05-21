@@ -23,7 +23,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  }: let
     system = "x86_64-linux";
     kasaneCursorOverlay = final: prev: {
       kasane-teto-cursors = prev.runCommand "kasane-teto-cursor" {} ''
@@ -34,7 +39,7 @@
     mkHost = hostModule:
       nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
         modules = [
           {nixpkgs.overlays = [kasaneCursorOverlay];}
           ./configuration.nix
@@ -44,7 +49,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.kiwi = import ./home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.extraSpecialArgs = {inherit inputs;};
             home-manager.backupFileExtension = "backup";
             home-manager.overwriteBackup = true;
           }

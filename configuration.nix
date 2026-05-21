@@ -14,6 +14,7 @@
     ./modules/config/session-variables.nix
     ./modules/config/steam.nix
     ./modules/config/thunar.nix
+    ./modules/config/nh.nix
   ];
 
   nix.settings.experimental-features = [

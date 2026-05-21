@@ -187,7 +187,7 @@
         shadowOffsetY = 0;
         language = "";
         allowPanelsOnScreenWithoutBar = true;
-        showChangelogOnStartup = true;
+        showChangelogOnStartup = false;
         telemetryEnabled = false;
         enableLockScreenCountdown = false;
         lockScreenCountdownDuration = 10000;

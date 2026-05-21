@@ -21,9 +21,6 @@
       ];
       exec-once = [
         "noctalia-shell"
-        "firefox"
-        "obsidian"
-        "spotify"
       ];
     };
   };

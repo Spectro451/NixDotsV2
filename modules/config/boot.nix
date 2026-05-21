@@ -8,7 +8,7 @@
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
-    timeout = 15;
+    timeout = 5;
     systemd-boot.consoleMode = "max";
   };
 }

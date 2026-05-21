@@ -8,7 +8,7 @@
       poppler
     ];
     settings = {
-      manager = {
+      mgr = {
         show_hidden = true;
         show_symlink = true;
       };

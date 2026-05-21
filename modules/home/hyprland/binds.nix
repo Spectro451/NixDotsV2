@@ -42,7 +42,7 @@ in {
       "SUPER SHIFT, 9, movetoworkspace, 9"
       "SUPER SHIFT, 0, movetoworkspace, 10"
       #ScreenShot
-      "SUPER, S, exec, hyprshot -m region"
+      "SUPER, S, exec, hyprshot -m region -o ~/Pictures/Screenshots"
       #Scroll workspaces
       "SUPER, mouse_down, workspace, e+1"
       "SUPER, mouse_up, workspace, e-1"

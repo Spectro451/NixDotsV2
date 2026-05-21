@@ -22,6 +22,7 @@
     ./modules/home/thunar
     ./modules/home/spotify
     ./modules/home/yazi
+    ./modules/home/gtk.nix
   ];
 
   programs.vesktop.enable = true;

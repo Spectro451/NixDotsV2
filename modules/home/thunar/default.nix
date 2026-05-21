@@ -1,16 +1,4 @@
 {pkgs, ...}: {
-  gtk = {
-    enable = true;
-    gtk4.theme = null;
-    theme = {
-      name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
-    };
-    iconTheme = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
-    };
-  };
   xfconf.settings = {
     thunar = {
       "last-view" = "ThunarIconView";

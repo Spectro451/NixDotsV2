@@ -13,6 +13,7 @@ in {
 
   programs.lazyvim = {
     enable = true;
+    pluginSource = "nixpkgs";
     plugins = {
       colorscheme = colorschemePlugins;
       editor = editorPlugins;

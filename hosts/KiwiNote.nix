@@ -4,11 +4,10 @@
   hardware.bluetooth.enable = true;
   # Power management
   powerManagement.enable = true;
-  services.tlp = {
-    enable = true;
-    settings = {
-      TLP_WARN_LEVEL = 1;
-    };
+  services.tlp.enable = true;
+  systemd.services.tlp.serviceConfig = {
+    StandardOutput = "null";
+    StandardError = "null";
   };
   services.upower.enable = true;
   # Fingerprint

@@ -15,6 +15,7 @@
     ./modules/config/steam.nix
     ./modules/config/thunar.nix
     ./modules/config/nh.nix
+    ./modules/config/droidcam.nix
   ];
 
   nix.settings.experimental-features = [

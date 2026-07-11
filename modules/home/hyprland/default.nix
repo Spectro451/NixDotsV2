@@ -19,9 +19,7 @@
         "xcursor_size,20"
         "hyprcursor_size,20"
       ];
-      exec-once = [
-        "noctalia-shell"
-      ];
+      exec-once = [];
     };
   };
 }

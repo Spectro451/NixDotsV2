@@ -10,7 +10,7 @@ in {
       "SUPER, M, exit"
       "SUPER, E, exec, ${filemanager}"
       "SUPER, V, togglefloating"
-      "SUPER, R, exec, noctalia-shell ipc call launcher toggle"
+      "SUPER, R, exec, noctalia msg panel-toggle launcher"
       "SUPER, P, pseudo"
       "SUPER, J, layoutmsg, togglesplit"
       "SUPER, F, fullscreen"

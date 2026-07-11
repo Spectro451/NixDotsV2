@@ -9,7 +9,7 @@
   home.stateVersion = "26.05";
 
   imports = [
-    ./modules/home/noctalia/noctalia.nix
+    ./modules/home/noctalia
     ./modules/home/zsh.nix
     ./modules/home/hyprland
     ./modules/home/fastfetch

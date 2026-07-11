@@ -22,4 +22,6 @@
     gvfs.enable = true;
     tailscale.enable = true;
   };
+  virtualisation.docker.enable = true;
+  users.users.kiwi.extraGroups = ["docker"];
 }

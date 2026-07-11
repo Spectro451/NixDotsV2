@@ -9,6 +9,6 @@
     alejandra
     prettierd
     stylua
-    #docker
+    claude-code
   ];
 }

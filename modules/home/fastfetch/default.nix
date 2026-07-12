@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 
 let
   #colores bonitos
@@ -37,7 +37,7 @@ in
     enable = true;
     settings = {
       logo = {
-        source = "${config.home.homeDirectory}/.config/fastfetch/logo/punpun.png";
+        source = builtins.toString ./logo/punpun.png;
         type = "kitty";
         padding = {
           top = 2;

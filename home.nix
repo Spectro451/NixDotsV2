@@ -42,9 +42,5 @@
     prismlauncher
   ];
 
-  home.file = {
-    ".config/fastfetch/logo/punpun.png".source = ./modules/home/fastfetch/logo/punpun.png;
-  };
-
   services.syncthing.enable = true;
 }

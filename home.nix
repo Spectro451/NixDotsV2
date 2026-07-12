@@ -29,7 +29,6 @@
 
   home.packages = with pkgs; [
     btop
-    hyprshot
     brightnessctl
     wl-clipboard
     imv

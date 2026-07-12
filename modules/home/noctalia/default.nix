@@ -41,7 +41,7 @@
       };
       screenshot = {
         save_to_file = true;
-        output_directory = "${config.home.homeDirectory}/Pictures/Screenshots";
+        directory = "${config.home.homeDirectory}/Pictures/Screenshots";
         filename_pattern = "%d-%m-%Y-%H%M%S_hyprshot";
       };
       shadow.direction = "center";

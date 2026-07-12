@@ -56,6 +56,7 @@
       position = "top_right";
       position_vertical = "top_right";
       kinds.lock_keys = false;
+      kinds.media = false;
     };
   };
 }

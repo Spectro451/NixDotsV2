@@ -23,6 +23,7 @@
       media = {
         max_length = 200;
         title_scroll = "on_hover";
+        hide_when_no_media = true;
       };
       tray.drawer = true;
     };

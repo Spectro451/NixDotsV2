@@ -39,6 +39,7 @@
     obsidian
     pywal
     prismlauncher
+    osu-lazer-bin
   ];
 
   services.syncthing.enable = true;

@@ -37,7 +37,7 @@ in
     enable = true;
     settings = {
       logo = {
-        source = builtins.toString ./logo/punpun.png;
+        source = "${./logo/punpun.png}";
         type = "kitty";
         padding = {
           top = 2;

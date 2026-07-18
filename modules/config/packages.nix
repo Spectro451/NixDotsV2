@@ -21,6 +21,7 @@
     udisks2.enable = true;
     gvfs.enable = true;
     tailscale.enable = true;
+    fstrim.enable = true;
   };
   virtualisation.docker.enable = true;
   users.users.kiwi.extraGroups = ["docker"];

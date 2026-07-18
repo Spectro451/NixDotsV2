@@ -1,8 +1,15 @@
-{config, ...}: {
+{config, pkgs, ...}: {
   imports = [./KiwiPC-hardware.nix];
   networking.hostName = "KiwiPC";
 
+  powerManagement.cpuFreqGovernor = "performance";
+
   services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.graphics.extraPackages = with pkgs; [
+    nvidia-vaapi-driver
+    libva-utils
+  ];
 
   hardware.nvidia = {
     modesetting.enable = true;

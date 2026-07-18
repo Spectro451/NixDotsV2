@@ -2,9 +2,6 @@
 {
   wayland.windowManager.hyprland.settings = {
     windowrule = [
-      "workspace 1 silent, match:class ^(firefox)$"
-      "workspace 2 silent, match:initial_title ^(Obsidian)$"
-      "workspace 3 silent, match:class ^(spotify)$"
       "opacity 1.0 override 0.85 override 1 override, match:title .*YouTube.*"
       "opacity 1.0 override 0.85 override 1 override, match:title .*Crunchyroll.*"
       "opacity 1.0 override 0.85 override 1 override, match:title .*Netflix.*"

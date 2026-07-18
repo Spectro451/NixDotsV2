@@ -23,6 +23,7 @@
     "flakes"
   ];
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [ "electron-40.10.5" ];
   services.printing.enable = true;
   system.stateVersion = "26.05";
   services.postgresql = {

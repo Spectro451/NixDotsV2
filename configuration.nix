@@ -23,8 +23,6 @@
     "flakes"
   ];
   nixpkgs.config.allowUnfree = true;
-  # obsidian lo pide, acuerdate de revisar pal proximo flake update
-  nixpkgs.config.permittedInsecurePackages = [ "electron-40.10.5" ];
   services.printing.enable = true;
   system.stateVersion = "26.05";
   services.postgresql = {

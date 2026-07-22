@@ -1,4 +1,6 @@
-{...}: {
+{lib, ...}: let
+  lua = lib.generators.mkLuaInline;
+in {
   imports = [
     ./look.nix
     ./input.nix
@@ -8,18 +10,46 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    configType = "hyprlang";
+    configType = "lua";
     systemd.enable = false;
+
     extraConfig = ''
-      source = ~/.config/hypr/noctalia/noctalia-colors.conf
+      dofile(os.getenv("HOME") .. "/.config/hypr/noctalia.lua").apply_theme()
     '';
+
     settings = {
-      monitor = [",highrr,auto,1"];
-      env = [
-        "xcursor_size,20"
-        "hyprcursor_size,20"
+      monitor = [
+        {
+          output = "";
+          mode = "highrr";
+          position = "auto";
+          scale = "1";
+        }
       ];
-      exec-once = [];
+
+      env = [
+        { _args = [ "xcursor_size" "20" ]; }
+        { _args = [ "hyprcursor_size" "20" ]; }
+      ];
+
+      on = {
+        _args = [
+          "hyprland.start"
+          (lua ''
+            function()
+              hl.exec_cmd("noctalia")
+            end'')
+        ];
+      };
+
+      layer_rule = [{
+        name = "noctalia";
+        match = { namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$"; };
+        no_anim = true;
+        ignore_alpha = 0.5;
+        blur = true;
+        blur_popups = true;
+      }];
     };
   };
 }

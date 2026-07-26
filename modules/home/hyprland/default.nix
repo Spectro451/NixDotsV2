@@ -32,16 +32,6 @@ in {
         { _args = [ "hyprcursor_size" "20" ]; }
       ];
 
-      on = {
-        _args = [
-          "hyprland.start"
-          (lua ''
-            function()
-              hl.exec_cmd("noctalia")
-            end'')
-        ];
-      };
-
       layer_rule = [{
         name = "noctalia";
         match = { namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$"; };

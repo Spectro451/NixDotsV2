@@ -18,7 +18,7 @@
     ./modules/home/cursor.nix
     ./modules/home/editors/vscode.nix
     ./modules/home/editors/nvim
-    ./modules/home/firefox
+    ./modules/home/zen
     ./modules/home/thunar
     ./modules/home/spotify
     ./modules/home/yazi

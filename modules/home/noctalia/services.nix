@@ -11,7 +11,7 @@
       item_spacing = 4;
       main_axis_padding = 5;
       monitors = [];
-      pinned = ["firefox" "vesktop" "spotify"];
+      pinned = ["zen-twilight" "vesktop" "spotify"];
       position = "left";
       radius = 8;
       reserve_space = false;

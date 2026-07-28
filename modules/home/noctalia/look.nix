@@ -8,7 +8,7 @@
       wallpaper_scheme = "faithful";
       templates = {
         builtin_ids = ["gtk3" "gtk4" "hyprland" "kitty"];
-        community_ids = ["spicetify" "pywalfox" "neovim" "vscode" "discord" "papirus-icons" "steam" "yazi"];
+        community_ids = ["spicetify" "neovim" "vscode" "discord" "papirus-icons" "steam" "yazi"];
       };
     };
 

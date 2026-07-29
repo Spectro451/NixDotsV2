@@ -23,7 +23,14 @@
     ./modules/home/spotify
     ./modules/home/yazi
     ./modules/home/gtk.nix
+    ./modules/home/emulation.nix
   ];
+
+  kiwi.emulation = {
+    steam-rom-manager = true;
+    rmg = true;
+    pcsx2 = true;
+  };
 
   programs.vesktop.enable = true;
 

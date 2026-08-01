@@ -30,6 +30,8 @@
     steam-rom-manager = true;
     rmg = true;
     pcsx2 = true;
+    dolphin = false;
+    rpcs3 = false;
   };
 
   programs.vesktop.enable = true;

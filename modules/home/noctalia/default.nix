@@ -30,7 +30,10 @@
       password_style = "random";
       polkit_agent = true;
       animation.speed = 1.45;
-      launcher.session_search = true;
+      launcher.providers.session = {
+        prefix = "session";
+        global = true;
+      };
       panel = {
         clipboard_placement = "attached";
         control_center_position = "center";

@@ -2,7 +2,7 @@
 {
   programs.noctalia.settings.plugins = {
     enabled = [ "noctalia/wallhaven" ];
-    auto_update = true;
+    auto_update = "all";
     source = [
       {
         name = "official";

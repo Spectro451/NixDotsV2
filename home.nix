@@ -41,7 +41,7 @@
     brightnessctl
     wl-clipboard
     imv
-    libreoffice-qt6-fresh
+    libreoffice-qt-stable
     imagemagick
     mpv
     protonup-qt

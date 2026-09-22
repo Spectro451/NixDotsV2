@@ -21,7 +21,6 @@ in {
       sortPlay
       fullAppDisplay
       autoVolume
-      betterGenres
     ];
     enabledCustomApps = with spicepkgs.apps; [
       lyricsPlus

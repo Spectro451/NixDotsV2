@@ -28,18 +28,20 @@ in {
       ];
 
       env = [
-        { _args = [ "xcursor_size" "20" ]; }
-        { _args = [ "hyprcursor_size" "20" ]; }
+        {_args = ["xcursor_size" "20"];}
+        {_args = ["hyprcursor_size" "20"];}
       ];
 
-      layer_rule = [{
-        name = "noctalia";
-        match = { namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$"; };
-        no_anim = true;
-        ignore_alpha = 0.5;
-        blur = true;
-        blur_popups = true;
-      }];
+      layer_rule = [
+        {
+          name = "noctalia";
+          match = {namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$";};
+          no_anim = true;
+          ignore_alpha = 0.5;
+          blur = true;
+          blur_popups = true;
+        }
+      ];
     };
   };
 }

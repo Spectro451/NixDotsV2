@@ -2,7 +2,7 @@
 {
   xdg.configFile = {
     "noctalia/user-templates.toml".text = ''
-      [templates.nvim-base16]
+      [theme.templates.user.nvim_base16]
       input_path  = "${config.home.homeDirectory}/.config/nvim/lua/matugen-template.lua"
       output_path = "${config.home.homeDirectory}/.config/nvim/lua/matugen.lua"
       post_hook   = "pkill -SIGUSR1 nvim || true"

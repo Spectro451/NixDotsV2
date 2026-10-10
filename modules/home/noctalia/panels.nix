@@ -120,6 +120,13 @@
       offset_x = 2;
       offset_y = 0;
       scale = 1.0;
+      filter_order = ["no_sound"];
+      filter.no_sound = {
+        enabled = true;
+        match_content = ".*";
+        show_toast = true;
+        play_sound = false;
+      };
     };
 
     osd = {

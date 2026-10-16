@@ -6,7 +6,7 @@
   imports = [
     ./modules/config/boot.nix
     ./modules/config/locale.nix
-    ./modules/config/display.nix
+    ./modules/config/sddm
     ./modules/config/hyprland.nix
     ./modules/config/users.nix
     ./modules/config/packages.nix

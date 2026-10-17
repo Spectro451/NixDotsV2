@@ -18,6 +18,7 @@
     Name=${themeName}
     Type=sddm-theme
     Version=1.1
+    QtVersion=6
     MainScript=Main.qml
     ConfigFile=theme.conf
   '';
@@ -65,7 +66,10 @@
     '';
   };
 in {
-  environment.systemPackages = [pkgs.kasane-teto-cursors];
+  environment.systemPackages = [
+    pkgs.kasane-teto-cursors
+    makima-theme
+  ];
 
   services.displayManager.sddm = {
     enable = true;
@@ -76,14 +80,12 @@ in {
     };
     theme = themeName;
     autoNumlock = true;
-    extraPackages =
-      [makima-theme]
-      ++ (with pkgs.kdePackages; [
-        qt5compat
-        qtdeclarative
-        qtmultimedia
-        qtsvg
-      ]);
+    extraPackages = with pkgs.kdePackages; [
+      qt5compat
+      qtdeclarative
+      qtmultimedia
+      qtsvg
+    ];
     settings.Theme = {
       CursorTheme = "kasane-teto-cursors";
       CursorSize = 30;

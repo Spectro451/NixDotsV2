@@ -46,7 +46,6 @@
     mpv
     protonup-qt
     obsidian
-    pywal
     prismlauncher
     osu-lazer-bin
   ];

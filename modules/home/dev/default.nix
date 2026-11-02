@@ -8,6 +8,5 @@
     ./dev.nix
     ./java.nix
     ./android.nix
-    ./llm.nix
   ];
 }
